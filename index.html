@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjai Kumar B | Portfolio</title>
+  <style>
+    :root {
+      --primary: #00e5ff;
+      --bg1: #0f0c29;
+      --bg2: #302b63;
+      --bg3: #24243e;
+      --text: #ffffff;
+      --accent: #ff4081;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3), var(--bg2));
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--primary);
+    }
+
+    header p {
+      color: #ddd;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.5s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: "➤ ";
+      color: var(--accent);
+    }
+
+    .project {
+      background: rgba(255,255,255,0.05);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+      background: rgba(255,255,255,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    /* Floating particles for aesthetic */
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sanjai Kumar B</h1>
+    <p>Aspiring Software Developer | Biomedical Engineer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am Sanjai Kumar B from Udumalpet, currently pursuing a B.E. in Biomedical Engineering at Karpagam Academy of Higher Education, Coimbatore. I'm passionate about building impactful software solutions and exploring the intersection of healthcare and technology.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Languages: C, C++, Java (Basics)</li>
+      <li>Development: Full Stack, Web & App Development</li>
+      <li>Tools: MS Office, Visual Studio Code</li>
+      <li>Certifications: NPTEL AI, Infosys IoT Edge, Udemy Nanodevices</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>IoT Based Therapy for Bedridden Patients</h3>
+      <p>Developed a warm mattress system using IoT for enhancing patient comfort in hospitals.</p>
+    </div>
+    <div class="project">
+      <h3>Doctor Appointment Booking App</h3>
+      <p>A simple Java-based application to help users schedule appointments with doctors efficiently.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sanjaitheni0301@gmail.com">sanjaitheni0301@gmail.com</a></p>
+    <p>Phone: <a href="tel:+916374648875">+91 6374648875</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sanjai-kumar-b-247093255" target="_blank">linkedin.com/in/sanjai-kumar-b</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Sanjai Kumar B | Designed with ❤️ in India
+  </footer>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <script>
+    // Reveal on scroll
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      sections.forEach((sec) => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          sec.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+
+    // Generate particles
+    const particleContainer = document.getElementById("particles");
+    for (let i = 0; i < 60; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("particle");
+      dot.style.left = `${Math.random() * 100}vw`;
+      dot.style.animationDuration = `${5 + Math.random() * 10}s`;
+      dot.style.opacity = `${0.3 + Math.random() * 0.5}`;
+      particleContainer.appendChild(dot);
+    }
+  </script>
+</body>
+</html>
